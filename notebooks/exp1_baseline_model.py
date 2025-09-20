@@ -11,7 +11,7 @@ mlflow.set_experiment("Sentiment Analysis Experiment using baseline model")
 import dagshub
 dagshub.init(repo_owner='Agrim912', repo_name='sentiment_analysis_mini_proj', mlflow=True)
 
-mlflow.set_uri("https://dagshub.com/Agrim912/sentiment_analysis_mini_proj.mlflow")
+mlflow.set_tracking_uri("https://dagshub.com/Agrim912/sentiment_analysis_mini_proj.mlflow")
 
 
 mlflow.set_tracking_uri("")
