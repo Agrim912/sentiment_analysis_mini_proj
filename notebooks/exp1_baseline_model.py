@@ -8,6 +8,12 @@ from sklearn.metrics import accuracy_score,precision_score,recall_score,f1_score
 import mlflow
 mlflow.set_experiment("Sentiment Analysis Experiment using baseline model")
 
+import dagshub
+dagshub.init(repo_owner='Agrim912', repo_name='sentiment_analysis_mini_proj', mlflow=True)
+
+mlflow.set_uri("https://dagshub.com/Agrim912/sentiment_analysis_mini_proj.mlflow")
+
+
 mlflow.set_tracking_uri("")
 df =pd.read_csv("https://raw.githubusercontent.com/sharmaroshan/Twitter-Sentiment-Analysis/refs/heads/master/train_tweet.csv")
 print("Shape: ",df.shape)
